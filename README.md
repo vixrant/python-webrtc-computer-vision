@@ -30,7 +30,7 @@ is used to run concurrent fuction calls. You can use some other job queue if you
 
 ## How it works
 
-In `pipeline.js`, I copied over the code for `MediaRecorder` in AioRTC and overwrote the `__run_track` function to create a
+In `pipeline.py`, I copied over the code for `MediaRecorder` in AioRTC and overwrote the `__run_track` function to create a
 concurrent task for each frame received. This can definitely be done better using Celery, but this code was built in a
 hackathon I haven't gotten around improving it. 
 
