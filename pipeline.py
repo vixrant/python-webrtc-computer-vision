@@ -8,19 +8,6 @@ from aiortc.contrib.media import MediaStreamTrack, MediaStreamError
 evt_loop = asyncio.Queue()
 
 class Pipeline:
-    """
-  A media sink that writes audio and/or video to a file.
-  Examples:
-  .. code-block:: python
-      # Write to a video file.
-      player = MediaRecorder('/path/to/file.mp4')
-      # Write to a set of images.
-      player = MediaRecorder('/path/to/file-%3d.png')
-  :param file: The path to a file, or a file-like object.
-  :param format: The format to use, defaults to autodect.
-  :param options: Additional options to pass to FFmpeg.
-  """
-
     def __init__(self):
         self.__tracks = list()
 
