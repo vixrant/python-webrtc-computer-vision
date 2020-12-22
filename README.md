@@ -34,5 +34,6 @@ In `pipeline.py`, I copied over the code for `MediaRecorder` in AioRTC and overw
 concurrent task for each frame received. This can definitely be done better using Celery, but this code was built in a
 hackathon I haven't gotten around improving it. 
 
-Currently it does give some framerate synchronization issues which could possibly be solved with better design. However,
-this repo is only a reference to show how to perform computer vision concurrently with video streaming.
+Currently it does have some framerate synchronization issues which could possibly be solved with better design. However,
+this repo is only a reference to show how to perform computer vision concurrently with video streaming. A better approach
+will be to use a sliding window/ queue in `pipeline.py`, so only the most recent frames are evaluated.
